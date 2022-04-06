@@ -47,4 +47,23 @@ function createList() {
         listItems.push(listItem);
         drggableList.append(listItem);
       });
+      addEventListener()
+}
+
+// drags etc
+
+function addEventListener(){
+    const dragables = document.querySelectorAll(".draggable");
+      const dragListItems = document.querySelectorAll(".draggable li"); 
+
+       dragables.forEach(draggable=>{
+           draggable.addEventListener("dragstart", dragStart);
+       })
+
+        dragListItems.forEach((item) => {
+          item.addEventListener("dragstart",dragStart);
+          item.addEventListener('drop',dragDrop)
+          item.addEventListener("dragenter", dragEnter);
+         item.addEventListener("dragleave", dragLeave);
+        });
 }
