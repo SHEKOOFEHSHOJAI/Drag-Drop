@@ -37,7 +37,7 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 .drggable-list  .number{
-    background-color: var(--background-color);
+  background-color: var(--background-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +54,7 @@ body {
     margin: 0 20px 0 0;
 }
 .drggable-list li.right .person-name{
-    color: greenyellow;
+    color: rgb(102, 163, 11);
 }
 
 .drggable-list li.wrong .person-name{
