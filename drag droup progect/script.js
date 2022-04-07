@@ -25,20 +25,13 @@ createList()
 
 function createList() {
   //spread
-  
-  [...richestPeple]
-  .map((a) => (
-    { 
-      value: a,
-      sort: Math.random()
-      
-    }
-    ))
-    
-    .sort((a, b) => a.sort - b.sort)
-          .map((a) => a.value)
-          .forEach((person, index) => {
-          
+
+    [...richestPeple]
+      .map((a) => ({ value: a, sort: Math.random() }))
+     
+      .sort((a, b) => a.sort - b.sort)
+      .map((a) => a.value)
+      .forEach((person, index) => {
 
         console.log(person);
         const listItem = document.createElement("li");
@@ -59,14 +52,14 @@ function createList() {
         listItems.push(listItem);
         drggableList.append(listItem);
       });
-      // addEventListener()
+      addEventListener()
 }
 
-// //////////////////////
-// // DRAGS etc
-// /////////////////////
+//////////////////////
+// DRAGS etc
+/////////////////////
 
-// //FUNCTION dragStart
+//FUNCTION dragStart
 
 function dragStart() {
 
@@ -82,7 +75,7 @@ function dragEnter() {
   this.classList.add("over");
 }
 
-// //FUNCTION dragOver
+//FUNCTION dragOver
 
 function dragOver(e) {
   console.log("Event", "dragOver");
