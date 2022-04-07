@@ -92,6 +92,7 @@ function dragLeave() {
 
 function dragDrop() {
   console.log("Event", "dragDrop");
+  
   const dragEndIndex = +this.getAttribute("data-index");
   swapItems(dragStartIndex,dragEndIndex)
   this.classList.remove('over')
