@@ -47,7 +47,7 @@ body {
 }
 
 .drggable-list li.over .draggable {
-  background-color: #eaeaea;
+  background-color: #c4c1c1;
 }
 
 .drggable-list .person-name {
@@ -69,7 +69,7 @@ body {
      flex: 1;
  }
  .chek-btn{
-      background-color: var(--background-color);
+  background-color: var(--background-color);
   border: none;
   color: var(--text-color);
   font-size: 16px;
