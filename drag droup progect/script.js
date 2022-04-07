@@ -68,95 +68,95 @@ function createList() {
 
 // //FUNCTION dragStart
 
-// function dragStart() {
+function dragStart() {
 
-// // console.log('Event','dragstart');
-// dragStartIndex = +this.closest("li").getAttribute("data-index");
-// console.log(this.closest("li"));
-// console.log(dragStartIndex);
-// }
+// console.log('Event','dragstart');
+dragStartIndex = +this.closest("li").getAttribute("data-index");
+console.log(this.closest("li"));
+console.log(dragStartIndex);
+}
 
-// //FUNCTION dragEnter
-// function dragEnter() {
-//   console.log("Event", "dragEnter");
-//   this.classList.add("over");
-// }
+//FUNCTION dragEnter
+function dragEnter() {
+  console.log("Event", "dragEnter");
+  this.classList.add("over");
+}
 
 // //FUNCTION dragOver
 
-// function dragOver(e) {
-//   console.log("Event", "dragOver");
-//    this.classList.remove("over");
-//    e.preventDefault()
-// }
+function dragOver(e) {
+  console.log("Event", "dragOver");
+   this.classList.remove("over");
+   e.preventDefault()
+}
 
-// //FUNCTION dragLeave
-// function dragLeave() {
-//   console.log("Event", "dragLeave");
-// }
+//FUNCTION dragLeave
+function dragLeave() {
+  console.log("Event", "dragLeave");
+}
 
-// //FUNCTION DROP
+//FUNCTION DROP
 
-// function dragDrop() {
-//   console.log("Event", "dragDrop");
-//   const dragEndIndex = +this.getAttribute("data-index");
-//   swapItems(dragStartIndex,dragEndIndex)
-//   this.classList.remove('over')
-// }
+function dragDrop() {
+  console.log("Event", "dragDrop");
+  const dragEndIndex = +this.getAttribute("data-index");
+  swapItems(dragStartIndex,dragEndIndex)
+  this.classList.remove('over')
+}
 
-// // Swap list items that are drag and drop
+// Swap list items that are drag and drop
 
-// function swapItems(fromIndex,toIndex) {
+function swapItems(fromIndex,toIndex) {
 
-// const itemOne = listItems[fromIndex].querySelector(".draggable");
-// const itemTwo = listItems[toIndex].querySelector(".draggable");
+const itemOne = listItems[fromIndex].querySelector(".draggable");
+const itemTwo = listItems[toIndex].querySelector(".draggable");
 
-// // move index and 
-// listItems[toIndex].appendChild(itemOne);
-// listItems[fromIndex].appendChild(itemTwo);
+// move index and 
+listItems[toIndex].appendChild(itemOne);
+listItems[fromIndex].appendChild(itemTwo);
 
-// }
+}
 
-// // Check the order of list item
+// Check the order of list item
 
-// check.addEventListener("click", checkOrder);
+check.addEventListener("click", checkOrder);
 
-// //FUNCTION checkOrder
-// function checkOrder() {
+//FUNCTION checkOrder
+function checkOrder() {
 
-// listItems.forEach((listitem,index)=>{
-//   const personeName = listitem.querySelector(".draggable")
-//   .innerText.trim();
+listItems.forEach((listitem,index)=>{
+  const personeName = listitem.querySelector(".draggable")
+  .innerText.trim();
 
-//   if (personeName !== richestPeple[index]) {
+  if (personeName !== richestPeple[index]) {
 
-//     listitem.classList.add("wrong");
-//   }
-//    else {
-//     listitem.classList.remove("wrong");
-//     listitem.classList.add("right");
-//   }
+    listitem.classList.add("wrong");
+  }
+   else {
+    listitem.classList.remove("wrong");
+    listitem.classList.add("right");
+  }
 
-// })
+})
 
-// }
+}
 
 
-// function addEventListener(){
-//     const dragables = document.querySelectorAll(".draggable");
-//       const dragListItems = document.querySelectorAll(".drggable-list  li"); 
+function addEventListener(){
+    const dragables = document.querySelectorAll(".draggable");
+      const dragListItems = document.querySelectorAll(".drggable-list  li"); 
 
-//        dragables.forEach(draggable=>{
+       dragables.forEach(draggable=>{
 
-//            draggable.addEventListener("dragstart", dragStart);
-//        })
+           draggable.addEventListener("dragstart", dragStart);
+       })
 
-//         dragListItems.forEach((item) => {
+        dragListItems.forEach((item) => {
 
-//            item.addEventListener("dragover", dragOver);
-//            item.addEventListener("dragenter", dragEnter);
-//            item.addEventListener("dragleave", dragLeave);
-//            item.addEventListener("drop", dragDrop);
+           item.addEventListener("dragover", dragOver);
+           item.addEventListener("dragenter", dragEnter);
+           item.addEventListener("dragleave", dragLeave);
+           item.addEventListener("drop", dragDrop);
 
-//         });
-// }
+        });
+}
